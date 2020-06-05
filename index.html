@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Custom element</title>
+    <script src="index.js" type="module" defer></script>
+</head>
+<body>
+Hello
+<timeline-element id="myTimeline"></timeline-element>
+<script>
+setTimeout(() =>{
+    const timeline = document.querySelector('#myTimeline')
+     timeline.data = [
+         {
+         text:'salutttt',
+         date: new Date()
+     },
+     {
+         text:'salutttt2',
+         date: new Date()
+     }
+     ]
+},1000)
+</script>
+</body>
+</html>
