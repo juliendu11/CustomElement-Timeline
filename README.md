@@ -1,6 +1,9 @@
 # CustomElement-Timeline
 Simple Timeline, it is a web components, it takes in parameters an array of object and a booleen value for the darkmode
 
+[Alt text](docs/images/darkmode.png "darkmode")
+[Alt text](docs/images/normalmode.png "normalmode")
+
 # How to install ?
 
 Just get the index.js file
@@ -19,12 +22,12 @@ const data = [
     {
         title: 'My title1',
         text: 'Text1',
-        Date: new Date()
+        date: new Date()
     },
       {
         title: 'My title2',
         text: 'Text2',
-        Date: new Date()
+        date: new Date()
     }
 ]
 
@@ -46,14 +49,14 @@ const data = [
       {
         title: 'My title2',
         text: 'Text2',
-        Date: new Date()
+        date: new Date()
     },
 ]
 
 data.push({
         title: 'My title3',
         text: 'Text3',
-        Date: new Date()
+        date: new Date()
 })
 
 const timeline = document.querySelector('#myTimeline')

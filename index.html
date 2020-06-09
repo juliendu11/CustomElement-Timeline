@@ -6,33 +6,29 @@
     <title>Timeline - Custom element</title>
     <script src="index.js" type="module" defer></script>
 </head>
-<body>
-Hello
+<body style="background-color:black">
 <timeline-element id="myTimeline"></timeline-element>
 <script>
-const datas  = []
-datas.push( {
-         text:'salutttt',
-         date: new Date()
-     })
-     datas.push( {
-         text:'salutttt2',
-         date: new Date()
-     })
+
 setTimeout(() =>{
-    const timeline = document.querySelector('#myTimeline')
-     timeline.data = datas
+    const datas = [
+    {
+        title: 'My title1',
+        text: 'Text1',
+        date: new Date()
+    },
+      {
+        title: 'My title2',
+        text: 'Text2',
+        date: new Date()
+    }
+]
+
+const timeline = document.querySelector('#myTimeline')
+timeline.data = datas
+timeline.darkmode =true
 },1000)
-setTimeout(() =>{
-    datas.push({
-        text:'salutttt3',
-         date: new Date()
-    })
-   document.body.style.backgroundColor = "black";
-    const timeline = document.querySelector('#myTimeline')
-    timeline.darkmode=true
-   timeline.data = datas
-},2000)
+
 </script>
 </body>
 </html>
