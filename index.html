@@ -10,19 +10,29 @@
 Hello
 <timeline-element id="myTimeline"></timeline-element>
 <script>
-setTimeout(() =>{
-    const timeline = document.querySelector('#myTimeline')
-     timeline.data = [
-         {
+const datas  = []
+datas.push( {
          text:'salutttt',
          date: new Date()
-     },
-     {
+     })
+     datas.push( {
          text:'salutttt2',
          date: new Date()
-     }
-     ]
+     })
+setTimeout(() =>{
+    const timeline = document.querySelector('#myTimeline')
+     timeline.data = datas
 },1000)
+setTimeout(() =>{
+    datas.push({
+        text:'salutttt3',
+         date: new Date()
+    })
+   document.body.style.backgroundColor = "black";
+    const timeline = document.querySelector('#myTimeline')
+    timeline.darkmode=true
+   timeline.data = datas
+},2000)
 </script>
 </body>
 </html>
